@@ -1,0 +1,40 @@
+﻿<?xml version="1.0"?>
+<Container version="2">
+  <Name>pushbullet_ytdl</Name>
+  <Repository>ghcr.io/steveharsant/pushbullet_ytdl:latest</Repository>
+  <Registry/>
+  <Network>custom-br0</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/steveharsant/PushBullet-YTDL</Support>
+  <Project>https://github.com/steveharsant/PushBullet-YTDL</Project>
+  <Overview>PushBullet-YTDL is a lightweight pure bash service for YouTube-dl and Pushbullet. PushBullet-YTDL uses Youtube-DL Material by Tzahi12345 as the API endpoint to send YouTube-dl requests to and leverages the public Pushbullet API to listen for download requests.&#xD;
+&#xD;
+Features&#xD;
+Register a device to a given Pushbullet account.&#xD;
+Listen for pushes to the device registered.&#xD;
+Extract the URL to the desired download.&#xD;
+Send a download request to Youtube-DL Material via its internal API.&#xD;
+Delete a push after it has been successfully downloaded.&#xD;
+Usage&#xD;
+To use simply share a video from the source app (e.g. YouTube app) on your phone to the PushBullet device running PushBullet-YTDL.</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://is2-ssl.mzstatic.com/image/thumb/Purple1/v4/a6/91/ce/a691ce9e-4ce2-ec37-50e8-14d57d8dc4e5/icons.png/1200x630bb.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1663940397</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Pushbullet Device Name" Target="PUSHBULLET_DEVICE_NICKNAME" Default="Unraid" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">Unraid</Config>
+  <Config Name="Pushbullet API Key" Target="PUSHBULLET_KEY" Default="" Mode="" Description="Enter the API key for Pushbullet. Go to https://www.pushbullet.com/#settings/account to retrieve your API key/access token" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="YouTube-DL-Material API Key" Target="YTDLM_KEY" Default="" Mode="" Description="YouTube-Download-Material API key" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="YouTube-DL-Material URL" Target="YTDLM_URL" Default="" Mode="" Description="URL + Port for YouTube-DL-Material.&#13;&#10;If HTTP: include http://ip:port&#13;&#10;if HTTPS: include https://domain" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="DEBUG" Target="DEBUG" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">FALSE</Config>
+  <Config Name="Host Key 1" Target="depends_on" Default="" Mode="" Description="Container name for YouTube-DL-Material" Type="Variable" Display="always" Required="false" Mask="false">youtube-dl-material</Config>
+  <Config Name="Sleep Time" Target="SLEEP_TIME" Default="60" Mode="" Description="Change sleep delay between calls (Push bullet free account only allows 500 API calls per month. Default is 60 seconds" Type="Variable" Display="always" Required="false" Mask="false">60</Config>
+</Container>
