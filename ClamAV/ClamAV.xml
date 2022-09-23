@@ -13,7 +13,7 @@
 &#xD;
 &#xD;
 To scan, run clamscan --recursive /scan as an example</Overview>
-  <Category>Tools:Utilities Security: spotlight:</Category>
+  <Category>Tools:Utilities</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/tquizzle/Docker-xml/master/docker-clamav-alpine.xml</TemplateURL>
   <Icon>https://its.ucsc.edu/software/images/clam.png</Icon>
@@ -21,8 +21,6 @@ To scan, run clamscan --recursive /scan as an example</Overview>
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1663803906</DateInstalled>
-  <DonateText>Buy me a coffee</DonateText>
-  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=KK2S75LBHM6QC&amp;amp;source=url_id=JTSH886FD9UM6</DonateLink>
   <Requires/>
   <Config Name="Folder to Scan" Target="/scan" Default="/path/to/scan" Mode="ro" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user</Config>
   <Config Name="ClamAV Signatures" Target="/var/lib/clamav" Default="/mnt/cache/appdata/clamav" Mode="rw" Description="Storage for freshclam updates" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/clamav</Config>
