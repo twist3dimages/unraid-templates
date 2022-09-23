@@ -13,7 +13,7 @@
 &#xD;
 &#xD;
 To scan, run clamscan --recursive /scan as an example</Overview>
-  <Category>Tools:Utilities Security: spotlight:</Category>
+  <Category>Tools:Utilities Security:</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/tquizzle/Docker-xml/master/docker-clamav-alpine.xml</TemplateURL>
   <Icon>https://its.ucsc.edu/software/images/clam.png</Icon>
