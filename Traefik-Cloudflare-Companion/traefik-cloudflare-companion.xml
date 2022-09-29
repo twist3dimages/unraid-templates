@@ -30,7 +30,8 @@ The supported labels are:&#xD;
 &#xD;
 Traefik Version	Single Host	Multiple Host&#xD;
 1	traefik.normal.frontend.rule=Host:example1.domain.tld	traefik.normal.frontend.rule=Host:example1.domain.tld,example2.domain.tld&#xD;
-2	traefik.http.routers.example.rule=Host(`example1.domain.tld`)	``traefik.http.routers.example.rule=Host(example1.domain.tld)</Overview>
+2	traefik.http.routers.example.rule=Host(`example1.domain.tld`)	``traefik.http.routers.example.rule=Host(example1.domain.tld)
+  </Overview>
   <Category>Network:DNS</Category>
   <WebUI/>
   <TemplateURL/>
