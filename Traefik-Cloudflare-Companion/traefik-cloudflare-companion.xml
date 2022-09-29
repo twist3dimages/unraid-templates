@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/tiredofit/docker-traefik-cloudflare-companion</Support>
   <Project>https://github.com/tiredofit/docker-traefik-cloudflare-companion</Project>
-  <Overview>This builds a Docker image to automatically update and create Cloudflare DNS (CNAME) records upon container start. A time saver if you are regularly moving containers around to different systems. This will allow you to set multiple zone's you wish to update.&#xD;
+  <Overview>This builds a Docker image to automatically update and create Cloudflare DNS records upon container start. A time saver if you are regularly moving containers around to different systems. This will allow you to set multiple zone's you wish to update.&#xD;
 &#xD;
 IMPORTANT:&#xD;
 Discovery&#xD;
