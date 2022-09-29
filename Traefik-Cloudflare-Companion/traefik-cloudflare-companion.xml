@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>traefik-cloudflare-companion</Name>
+  <Repository>tiredofit/traefik-cloudflare-companion:latest</Repository>
+  <Registry>https://hub.docker.com/r/tiredofit/traefik-cloudflare-companion</Registry>
+  <Network>cd1gitproxy</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/tiredofit/docker-traefik-cloudflare-companion</Support>
+  <Project>https://github.com/tiredofit/docker-traefik-cloudflare-companion</Project>
+  <Overview>This builds a Docker image to automatically update Cloudflare DNS records upon container start. A time saver if you are regularly moving containers around to different systems. This will allow you to set multiple zone's you wish to update.&#xD;
+&#xD;
+IMPORTANT:&#xD;
+Discovery&#xD;
+cloudflare-companion supports three different discovery mode: Docker, Docker Swarm, and Traefik Polling. The Docker discovery mode is the only mode enabled by default. Once matching hosts are discovered, cloudflare-companion will add or update CNAMEs in CloudFlare that point to the configured TARGET_DOMAIN.&#xD;
+&#xD;
+Docker&#xD;
+cloudflare-companion will discover running Docker containers by searching for supported labels.&#xD;
+&#xD;
+The supported labels are:&#xD;
+&#xD;
+Traefik Version	Single Host	Multiple Host&#xD;
+1	traefik.normal.frontend.rule=Host:example1.domain.tld	traefik.normal.frontend.rule=Host:example1.domain.tld,example2.domain.tld&#xD;
+2	traefik.http.routers.example.rule=Host(`example1.domain.tld`)	``traefik.http.routers.example.rule=Host(example1.domain.tld)&#xD;
+Docker Swarm&#xD;
+Docker Swarm mode can be enabled by setting the environment variable SWARM_MODE=TRUE. This will cause cloudflare-companion to discover running Docker Swarm services with supported labels.&#xD;
+&#xD;
+The supported labels are:&#xD;
+&#xD;
+Traefik Version	Single Host	Multiple Host&#xD;
+1	traefik.normal.frontend.rule=Host:example1.domain.tld	traefik.normal.frontend.rule=Host:example1.domain.tld,example2.domain.tld&#xD;
+2	traefik.http.routers.example.rule=Host(`example1.domain.tld`)	``traefik.http.routers.example.rule=Host(example1.domain.tld)</Overview>
+  <Category>Network:DNS</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/docker-library/docs/a6cc2c5f4bc6658168f2a0abbb0307acaefff80e/traefik/logo.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="TRAEFIK_VERSION" Target="TRAEFIK_VERSION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">2</Config>
+  <Config Name="DOCKER_ENTRYPOINT" Target="DOCKER_ENTRYPOINT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">unix://var/run/docker.sock</Config>
+  <Config Name="CF_TOKEN" Target="CF_TOKEN" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DOMAIN1" Target="DOMAIN1" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">domain.tld</Config>
+  <Config Name="DOMAIN2" Target="DOMAIN2" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">domain2.tld</Config>
+  <Config Name="DOMAIN1_ZONE_ID" Target="DOMAIN1_ZONE_ID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DOMAIN1_PROXIED" Target="DOMAIN1_PROXIED" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">TRUE</Config>
+  <Config Name="DOMAIN2_ZONE_ID" Target="DOMAIN2_ZONE_ID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="TARGET_DOMAIN" Target="TARGET_DOMAIN" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">domain.tld</Config>
+  <Config Name="DOMAIN1_PROXIED" Target="DOMAIN1_PROXIED" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">TRUE</Config>
+  <Config Name="TRAEFIK_VERSION" Target="TRAEFIK_VERSION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">2</Config>
+  <Config Name="ENABLE_TRAEFIK_POLL" Target="ENABLE_TRAEFIK_POLL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">TRUE</Config>
+  <Config Name="TRAEFIK_POLL_URL" Target="TRAEFIK_POLL_URL" Default="http://192.168.50.37" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">http://<traefik-ip>:<traefik-webui-port></Config>
+  <Config Name="Docker" Target="/var/run/docker.sock" Default="" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="DRY_RUN" Target="DRY_RUN" Default="FALSE" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">FALSE</Config>
+  <Config Name="REFRESH_ENTRIES" Target="REFRESH_ENTRIES" Default="FALSE" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">TRUE</Config>
+</Container>
