@@ -54,7 +54,7 @@ Traefik Version	Single Host	Multiple Host&#xD;
   <Config Name="DOMAIN1_PROXIED" Target="DOMAIN1_PROXIED" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">TRUE</Config>
   <Config Name="TRAEFIK_VERSION" Target="TRAEFIK_VERSION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">2</Config>
   <Config Name="ENABLE_TRAEFIK_POLL" Target="ENABLE_TRAEFIK_POLL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">TRUE</Config>
-  <Config Name="TRAEFIK_POLL_URL" Target="TRAEFIK_POLL_URL" Default="http://192.168.50.37" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">http://traefik-ip:traefik-webui-port</Config>
+  <Config Name="TRAEFIK_POLL_URL" Target="TRAEFIK_POLL_URL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">http://traefik-ip:traefik-webui-port</Config>
   <Config Name="Docker" Target="/var/run/docker.sock" Default="" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false">/var/run/docker.sock</Config>
   <Config Name="DRY_RUN" Target="DRY_RUN" Default="FALSE" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">FALSE</Config>
   <Config Name="REFRESH_ENTRIES" Target="REFRESH_ENTRIES" Default="FALSE" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">TRUE</Config>
