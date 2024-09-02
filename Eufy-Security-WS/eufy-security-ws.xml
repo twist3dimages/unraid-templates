@@ -21,7 +21,7 @@ https://hub.docker.com/r/bropat/eufy-security-ws/ </Overview>
   <Icon>https://github.com/bropat/eufy-security-ws/raw/master/docs/_media/eufy-security-ws.png</Icon>
   <ExtraParams/>
   <PostArgs/>
-  <CPUset></CPUset>
+  <CPUset/>
   <DateInstalled>1725296931</DateInstalled>
   <DonateText/>
   <DonateLink/>
