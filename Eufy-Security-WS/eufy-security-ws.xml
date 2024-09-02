@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>eufy-security-ws</Name>
+  <Repository>bropat/eufy-security-ws</Repository>
+  <Registry>https://hub.docker.com/r/bropat/eufy-security-ws/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/bropat/eufy-security-ws/</Support>
+  <Project>https://github.com/bropat/eufy-security-ws</Project>
+  <Overview>A small server wrapper around eufy-security-client library to access it via a WebSocket
+&#xD;
+Exposes the client library over websocket
+&#xD;
+Implements almost all functionality of the client library Including live streaming
+https://hub.docker.com/r/bropat/eufy-security-ws/ </Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/bropat/eufy-security-ws/raw/master/docs/_media/eufy-security-ws.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset></CPUset>
+  <DateInstalled>1725296931</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Container Path 1" Target="/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/eufy-security-ws</Config>
+  <Config Name="Container Port 1" Target="3000" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="USERNAME" Target="USERNAME" Default="" Mode="" Description="Eufy Account Username (required)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="PASSWORD" Target="PASSWORD" Default="" Mode="" Description="Eufy Account Password (required)" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="COUNTRY" Target="COUNTRY" Default="US" Mode="" Description="ISO 3166-1 Alpha-2 country code (default: US)" Type="Variable" Display="always" Required="false" Mask="false">US</Config>
+  <Config Name="LANGUAGE" Target="LANGUAGE" Default="en" Mode="" Description="ISO 639 language code (default: en)" Type="Variable" Display="always" Required="false" Mask="false">en</Config>
+  <Config Name="TRUSTED_DEVICE_NAME" Target="TRUSTED_DEVICE_NAME" Default="eufyclient" Mode="" Description="Label of the trusted devices (viewable with 2fa activated in Eufy App; default: eufyclient)" Type="Variable" Display="always" Required="false" Mask="false">unraid</Config>
+  <Config Name="EVENT_DURATION_SECONDS" Target="EVENT_DURATION_SECONDS" Default="10" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">10</Config>
+  <Config Name="P2P_CONNECTION_SETUP" Target="P2P_CONNECTION_SETUP" Default="" Mode="" Description="P2P connection setup (default: 0 ; Prefers local connection over cloud)" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="POLLING_INTERVAL_MINUTES" Target="POLLING_INTERVAL_MINUTES" Default="10" Mode="" Description="Polling intervall for data refresh from Eufy Cloud (default: 10 min.)" Type="Variable" Display="always" Required="false" Mask="false">10</Config>
+  <Config Name="ACCEPT_INVITATIONS" Target="ACCEPT_INVITATIONS" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="ACCEPT_INVITATIONS" Target="ACCEPT_INVITATIONS" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="DEBUG" Target="DEBUG" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+</Container>
