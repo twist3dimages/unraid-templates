@@ -37,5 +37,6 @@ https://hub.docker.com/r/bropat/eufy-security-ws/ </Overview>
   <Config Name="P2P_CONNECTION_SETUP" Target="P2P_CONNECTION_SETUP" Default="" Mode="" Description="P2P connection setup (default: 0 ; Prefers local connection over cloud)" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
   <Config Name="POLLING_INTERVAL_MINUTES" Target="POLLING_INTERVAL_MINUTES" Default="10" Mode="" Description="Polling intervall for data refresh from Eufy Cloud (default: 10 min.)" Type="Variable" Display="always" Required="false" Mask="false">10</Config>
   <Config Name="ACCEPT_INVITATIONS" Target="ACCEPT_INVITATIONS" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="STATION_IP_ADDRESSES" Target="STATION_IP_ADDRESSES" Default="" Mode="" Description="Suggested IP addresses for a stations (default: unset; value format: station_serial1:ipaddress1;station_serial2:ipaddress2)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="DEBUG" Target="DEBUG" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
 </Container>
