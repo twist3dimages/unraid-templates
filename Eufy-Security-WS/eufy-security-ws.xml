@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>eufy-security-ws</Name>
+  <Name>Eufy Security WS</Name>
   <Repository>bropat/eufy-security-ws</Repository>
   <Registry>https://hub.docker.com/r/bropat/eufy-security-ws/</Registry>
   <Network>bridge</Network>
