@@ -11,7 +11,7 @@
   <Project>https://github.com/claabs/qbittorrent-port-forward-file</Project>
   <Overview>Set qBittorrent's forwarded port by reading the port number from a file.
 
-    Useful if you use qBittorrent and your VPN client outputs the forwarded port to a file.
+    Useful if you your qBittorrent container is bound to a VPN client and your VPN client outputs the forwarded port to a file.
 
     ### Made for use with docker-wireguard-pia:
     - **Environment variable:** `PORT_FORWARDING=1`
