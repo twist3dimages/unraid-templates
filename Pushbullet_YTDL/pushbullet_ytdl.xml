@@ -3,7 +3,7 @@
   <Name>pushbullet_ytdl</Name>
   <Repository>ghcr.io/steveharsant/pushbullet_ytdl:latest</Repository>
   <Registry/>
-  <Network>custom-br0</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
