@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/charlocharlie/qbittorrent-port-forward-file/</Support>
+  <Support>https://github.com/claabs/qbittorrent-port-forward-file/issues</Support>
   <Project>https://github.com/claabs/qbittorrent-port-forward-file</Project>
   <Overview>Set qBittorrent's forwarded port by reading the port number from a file.
 
