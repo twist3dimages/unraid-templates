@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>qBittorrent Auto Port Forward</Name>
+  <Repository>charlocharlie/qbittorrent-port-forward-file</Repository>
+  <Registry>https://hub.docker.com/r/charlocharlie/qbittorrent-port-forward-file/</Registry>
+  <Network>media_automation</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/charlocharlie/qbittorrent-port-forward-file/</Support>
+  <Project>https://github.com/claabs/qbittorrent-port-forward-file</Project>
+  <Overview>Set qBittorrent's forwarded port by reading the port number from a file.
+
+    Useful if you use qBittorrent and your VPN client outputs the forwarded port to a file.
+
+    ### Made for use with docker-wireguard-pia:
+    - **Environment variable:** `PORT_FORWARDING=1`
+    - **Environment variable:** `PORT_PERSIST=1`
+    - **Environment variable:** `PORT_FILE=/pia/forwarded_port.txt`
+    - **Volume:** `/my/host/dir:/pia:rw`
+
+    ### Or for use with gluetun:
+    - **Environment variable:** `PRIVATE_INTERNET_ACCESS_VPN_PORT_FORWARDING=on`
+    - **Environment variable:** `PRIVATE_INTERNET_ACCESS_VPN_PORT_FORWARDING_STATUS_FILE=/gluetun/forwarded_port.txt`
+    - **Volume:** `/my/host/dir:/gluetun:rw`
+  </Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/twist3dimages/unraid-templates/main/icons/qbittorrent-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <Requires/>
+
+  <Config Name="Port Forwarding File" Target="/config/forwarded_port.txt" Default="/config/forwarded_port.txt" Mode="ro" Description="Container path to the file containing the forwarded port number. The container path must be /config/forwarded_port.txt, but you can use other file types." Type="Path" Display="always" Required="true" Mask="false"></Config>
+
+  <Config Name="QBT_USERNAME" Target="QBT_USERNAME" Default="admin" Mode="" Description="qBittorrent username." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="QBT_PASSWORD" Target="QBT_PASSWORD" Default="adminadmin" Mode="" Description="qBittorrent password." Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="QBT_ADDR" Target="QBT_ADDR" Default="http://localhost:8080" Mode="" Description="HTTP URL for the qBittorrent web UI, with port." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="PORT_FILE" Target="PORT_FILE" Default="/config/forwarded_port.txt" Mode="" Description="Container path to the file containing the forwarded port number. The container path must be /config/forwarded_port.txt, but you can use other file types." Type="Variable" Display="always" Required="false" Mask="false">/config/forwarded_port.txt</Config>
+
+  <TailscaleStateDir/>
+</Container>
