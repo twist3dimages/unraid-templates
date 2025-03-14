@@ -3,7 +3,7 @@
   <Name>qBittorrent Auto Port Forward</Name>
   <Repository>charlocharlie/qbittorrent-port-forward-file</Repository>
   <Registry>https://hub.docker.com/r/charlocharlie/qbittorrent-port-forward-file/</Registry>
-  <Network>media_automation</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
