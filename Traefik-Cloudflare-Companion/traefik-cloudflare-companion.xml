@@ -3,7 +3,7 @@
   <Name>traefik-cloudflare-companion</Name>
   <Repository>tiredofit/traefik-cloudflare-companion:latest</Repository>
   <Registry>https://hub.docker.com/r/tiredofit/traefik-cloudflare-companion</Registry>
-  <Network>cd1gitproxy</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
