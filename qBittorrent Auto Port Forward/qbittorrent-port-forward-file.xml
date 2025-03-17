@@ -28,7 +28,7 @@
   <WebUI/>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/twist3dimages/unraid-templates/main/icons/qbittorrent-icon.png</Icon>
-  <ExtraParams/>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
   <PostArgs/>
   <Requires/>
 
