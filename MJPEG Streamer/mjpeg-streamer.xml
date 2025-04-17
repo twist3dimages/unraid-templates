@@ -3,7 +3,7 @@
   <Name>mjpg-streamer</Name>
   <Repository>registry.gitlab.com/luckyturtledev/docker-mjpg-streamer:latest</Repository>
   <Registry>https://hub.docker.com/r/lukas1818/mjpg-streamer</Registry>
-  <Network>cd1gitproxy</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>

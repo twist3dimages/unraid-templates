@@ -3,7 +3,7 @@
   <Name>qBittorrent Auto Port Forward</Name>
   <Repository>charlocharlie/qbittorrent-port-forward-file</Repository>
   <Registry>https://hub.docker.com/r/charlocharlie/qbittorrent-port-forward-file/</Registry>
-  <Network>media_automation</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
@@ -28,7 +28,7 @@
   <WebUI/>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/twist3dimages/unraid-templates/main/icons/qbittorrent-icon.png</Icon>
-  <ExtraParams/>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
   <PostArgs/>
   <Requires/>
 
